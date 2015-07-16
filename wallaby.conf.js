@@ -9,8 +9,8 @@ var wallabyPostprocessor = wallabify({
 module.exports = function () {
   return {
     files: ([
-      'src/lib/angular.js',
-      'src/lib/angular-mocks.js',
+      {pattern: 'src/lib/angular.js', instrument: false},
+      {pattern: 'src/lib/angular-mocks.js', instrument: false},
       {pattern: 'src/app/**/*.js', load: false}
     ]),
 
