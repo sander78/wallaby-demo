@@ -6,7 +6,9 @@ var wallabyPostprocessor = wallabify({
     // browserify options, such as transformers
     // , b => b.exclude('mkdirp').transform(require('babelify'))
 
-module.exports = function () {
+module.exports = function (w) {
+console.log(w);
+
   return {
     files: ([
       {pattern: 'src/lib/angular.js', instrument: false},

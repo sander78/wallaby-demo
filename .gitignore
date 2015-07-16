@@ -1,0 +1,8 @@
+# Prefix all paths with / to make them absolute, otherwise all directories by that name will be ignored
+# Files that always should be ignored, e.g.: .classpath, belong in a global ~/.gitignore
+
+*.iml
+/.idea
+npm-debug.log
+/node_modules/
+
