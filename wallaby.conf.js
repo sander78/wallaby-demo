@@ -1,6 +1,7 @@
 var wallabify = require('wallabify');
 var wallabyPostprocessor = wallabify({
-      debug: true
+      debug: true,
+      entryPatterns: 'src/app/**/*.js'
     });// , b => b.transform(require('babelify').configure({optional: ['runtime']})));
     // you may also pass an initializer function to chain other
     // browserify options, such as transformers
@@ -17,7 +18,7 @@ console.log(w);
     ]),
 
     tests: [
-      {pattern: 'src/test/**/*.spec.js', load: false}
+      'src/test/**/*.spec.js'
     ],
 
     preprocessors: {
@@ -26,11 +27,6 @@ console.log(w);
 
     debug: true,
 
-    postprocessor: wallabyPostprocessor,
-
-    bootstrap: function () {
-      // required to trigger tests loading
-      window.__moduleBundler.loadTests();
-    }
+    postprocessor: wallabyPostprocessor
   };
 };
