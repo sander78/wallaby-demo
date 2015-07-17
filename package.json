@@ -26,6 +26,6 @@
     "karma-source-map-support": "^1.0.0",
     "phantomjs": "^1.9.17",
     "vinyl-source-stream": "^1.1.0",
-    "wallabify": "0.0.6"
+    "wallabify": "0.0.8"
   }
 }
